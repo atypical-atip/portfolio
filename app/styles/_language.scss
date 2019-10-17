@@ -1,0 +1,23 @@
+.language {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.language-button {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #fff;
+    color: #E76E57;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.language-button img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 5px;
+}

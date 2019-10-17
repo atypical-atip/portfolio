@@ -7,4 +7,11 @@ module.exports = function(){
 		.pipe( $.gulp.dest($.build.html) );
 
 	});
+
+		$.gulp.task('html:prod', function(){
+		
+		return $.gulp.src( `${$.src.html}**/*.html` )
+		.pipe( $.gulp.dest($.build.html) );
+
+	});
 }

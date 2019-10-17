@@ -10,7 +10,8 @@ npm i -D gulp-load-plugins gulp-sass gulp-sourcemaps gulp-postcss autoprefixer b
 //General settings
 global.$ = {
 	gulp: require('gulp'),
-	gp: require('gulp-load-plugins')({ //To add pugins using gp
+	//Add pugins using gp	
+	gp: require('gulp-load-plugins')({ 
 		pattern: '*'
 		}),
 
@@ -19,30 +20,22 @@ global.$ = {
 	},
 
 	build: {
-	        html: 'public/',	        
-	        styles: 'public/css/',
-	        img: 'public/img/',
-	        sprites: 'public/img/sprites/',
-	        fonts: 'public/fonts/'	        	        
+	        html: './public/',	        
+	        styles: './public/css/',
+	        img: './public/img/',
+	        sprites: './public/img/sprites/',
+	        fonts: './public/fonts/'	        	        
 		},
 
-		src: {
-			html: 'app/template/',
-			styles: 'app/styles/',
-			img: 'app/css/images/',
-			sprites: 'app/img/sprites/',
-			fonts: 'app/fonts/'
+	src: {
+		html: './app/template/',
+		styles: './app/styles/',
+		img: './app/img/',
+		sprites: './app/img/sprites/',
+		fonts: './app/fonts/',
+		static: './app/static/'
 
-		}
-
-	// folder:  {
-	// 	stylesSrc: './app/styles/',
-	// 	stylesDest: './public/css/',
-	// 	imgSrc: './app/img/',
-	// 	imgDest: './public/img/',
-	// 	public: './public/'
-
-	// }
+	}
 }
 
 //Iterate defined tasks in config/tasks.js and add them
@@ -53,7 +46,13 @@ global.$ = {
 
 //Default task for Gulp that runs and watch: 'image', 'svg', 'styles', 'browser-sync'
 $.gulp.task('default', $.gulp.series(
-	$.gulp.parallel('html', 'image', 'svg'),
+	$.gulp.parallel('html', 'image', 'svg:sprite', 'svg:copy', 'static'),
 	'styles',
 	$.gulp.parallel('watch', 'browser-sync')	
+	));
+
+//Task for production
+$.gulp.task('prod', $.gulp.series(
+	$.gulp.parallel('html:prod', 'image:prod', 'svg:sprite:prod', 'svg:copy:prod', 'static:prod'),
+	'styles:prod'
 	));

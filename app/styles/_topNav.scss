@@ -1,0 +1,79 @@
+#top-menu {
+    position: fixed;
+    flex-flow: row nowrap;
+    width: 100%;
+    padding: 15px 50px;
+    top: 0;
+    z-index: 99;
+}
+
+.navigation-items {
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем верхнее и нижнее поле, равное 1em*/
+    padding-left: 0; /*убираем левый отступ, равный 40px*/
+ }
+.navigation li {display: inline-block;}
+
+.navigation li:after {
+    content: "|";
+    color: #606060;
+    display: inline-block;
+    vertical-align:top;
+}
+
+.navigation li:last-child:after {content: none;}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 5px;
+    margin: 0 15px 0 15px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+//Current and hovered link
+// .navigation a.active, .navigation a:hover{color: #0798ec;}
+
+.navigation a:before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: #fff;
+    transition: .8s;
+    border-radius: 2px 0 0 2px;
+}
+.navigation a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #fff;
+  transition: .8s;
+  border-radius: 0 2px 2px 0;
+}
+
+.navigation a:hover:before, .navigation .active:before {left: 0;}
+.navigation a:hover:after, .navigation .active:after {right: 0;}
+
+
+@media (max-width: 550px) {
+    .navigation li {display: block;}
+    .navigation {padding-top: 0;}
+    .navigation li:after {content: none;}
+    .navigation a {
+      padding: 25px 0 20px; 
+      margin: 0 30px;
+    }
+}

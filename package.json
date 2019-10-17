@@ -1,5 +1,5 @@
 {
-  "name": "legion",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "Landing page for 'Legion'",
   "main": "index.js",
@@ -23,6 +23,19 @@
     "gulp-resolve-url": "0.0.2",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-svg-sprite": "^1.5.0"
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-watch": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atypical-atip/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atypical-atip/portfolio/issues"
+  },
+  "homepage": "https://github.com/atypical-atip/portfolio#readme",
+  "dependencies": {
+    "fullpage.js": "^3.0.7",
+    "normalize.css": "^8.0.1"
   }
 }
