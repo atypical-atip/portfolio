@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/index.js" type="text/javascript"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
-    <title>Олексій Довбах - про мене, портфоліо</title>
+    <script type="text/javascript" src="./js/fullpage.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css">    
+    <title>Олексій Довбах - фронтент розробник з Києва, про мене, портфоліо</title>
 </head>
 <body>
     <header id="top-menu" class="flex">
@@ -33,10 +33,10 @@
                 </figure>
                 <div class="about-text">
                     <h1 class="about-title">Привіт!</h1>
-                    <p class="about-paragraph">Мене звати Олексій і я фронтенд розробник з Києва. Вже більше 11 років я працюю комьюніті менеджером в компанії Innogames GmbH, яка є одним з найбільших розробників і видавцем ігр в Європі.</p>
-                    <p class="about-paragraph">За час своєї роботи я опанував багато професійних навичок: тайм менеджемент, вирішення конфліктів, підтримка користувачів, управління віддаленою командою, що нараховує більше 30 чоловік. Також отримав великий досвід роботи з vBulletin, Xenforo forum, Invision Powerboard, Adobe Photoshop, JIRA, Confluence, Media Wiki. І, як ви вже здогадалися, я вільно розмовляю, читаю і пишу англійською мовою ;)</p>
-                    <p class="about-paragraph">Але моєю справжньою пристрастю була і залишається фронтенд розробка. А, оскільки: "Обери собі професію, яку ти любиш і тобі ні дня не доведеться працювати" © Конфуцій (чи Копернік... в цих ваших інтернетах ще не розібрались чия це фраза :) ), я вирішив послідувати пораді і добитись успіху в цій сфері</p>
-                    <p class="about-paragraph">Наразі я працюю на невеликих проєктах, в основному на фрілансі (моє портфоліо ви зможете побачити нижче), але я мрію знайти роботу з масштабними і складними проєктами. Люблю епічність і складні, нетривіальні завдання ¯\_(ツ)_/¯</p>
+                    <p class="about-paragraph">Мене звати Олексій і я - фронтенд розробник з Києва. Вже більше 11 років я працюю ком’юніті менеджером в компанії Innogames GmbH, яка є одним з найбільших розробників і видавцем ігор в Європі.</p>
+                    <p class="about-paragraph">За час своєї роботи я опанував багато професійних навичок: тайм менеджмент, вирішення конфліктів, підтримка користувачів, управління віддаленою командою, що нараховує більше 30 чоловік. Також отримав великий досвід роботи з vBulletin, Xenforo forum, Invision Powerboard, Adobe Photoshop, JIRA, Confluence, Media Wiki. І, як ви вже здогадалися, я вільно розмовляю, читаю і пишу англійською мовою ;)</p>
+                    <p class="about-paragraph">Але моєю справжньою пристрастю була і залишається фронтенд розробка. А, оскільки: "Вибери собі професію, яку ти любиш і тобі ні дня не доведеться працювати" © Конфуцій (чи Коперник... в цих ваших інтернетах ще не розібрались чия це фраза :) ), я вирішив діяти за порадою і досягти успіху в сфері web-розробки.</p>
+                    <p class="about-paragraph">Наразі я працюю в основному на фрілансі (моє портфоліо ви зможете побачити нижче), але я мрію знайти роботу з масштабними і складними проектами. Люблю епічність і складні, нетривіальні завдання ¯\_(ツ)_/¯</p>
                 </div>
             </div>
         </section>
@@ -97,8 +97,13 @@
             </div>            
         </section>
         <section class="section portfolio">
-                <div class="slide" data-anchor="slide1"> Слайд 1 </div>
-                <div class="slide" data-anchor="slide2"> Слайд 2 </div>
+                <div class="slide main" data-anchor="slide1"> <h1 class="portfolio-main-title">Портфоліо</h1></div>
+                <div class="slide" data-anchor="slide2">
+                    <h3 class="portfolio-title">Сторінка дресерувального центру «Легіон»</h3>
+                    <p><b>Технології:</b> Wordpress, PHP, HTML5, CSS3, Javascript, Figma.</p>
+                    <p><b>Опис:</b> Спільно з замовником у Figma був розроблений дизайн та UX сайту. Шаблон для Wordpress ьув написаний «з нуля» з використанням HTML5, CSS3 та PHP. За допомогою Javascript було додано функціонал і динаміку на сайт. При написанні сайту я, як розробник, обов’язково слідкував за тим, щоб код був семантичним, кроссбраузерним і відповідав всім сучасним вимогам.</p>
+
+                </div>
                 <div class="slide" data-anchor="slide3"> Слайд 3 </div>
                 <div class="slide" data-anchor="slide4"> Слайд 4 </div>            
         </section>
@@ -115,7 +120,8 @@
             loopHorizontal: true,
             menu: '#top-menu',
             anchors: ['about', 'skills', 'portfolio', 'contacts'],
-            slidesNavigation: true
+            slidesNavigation: true,
+            fixedElements: "#top-menu"
 		});
 	</script>
 </body>
