@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/atypical-atip/portfolio#readme",
   "dependencies": {
-    "fullpage.js": "^3.0.7",
+    "fullpage.js": "^4.0.5",
     "normalize.css": "^8.0.1"
   }
 }
